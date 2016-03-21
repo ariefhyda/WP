@@ -1,0 +1,87 @@
+body{
+margin : 0;
+padding : 0;
+width: auto;
+height: auto;
+background: url(home.jpg) no-repeat center center fixed; 
+                -webkit-background-size: 100% 100%;
+                -moz-background-size: 100% 100%;
+                -o-background-size: 100% 100%;
+                background-size: 100% 100%;
+				
+
+text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+input{
+font-size:24px;
+padding:6px;
+border: 2px solid #000;
+border-radius : 5px
+}
+
+/*--- BOX Transparant ---*/
+#kalku{
+	margin-left: 45%px;
+	margin-top: 10px;
+	width: 30%;
+	height : 50%;
+	padding: 20px;
+	background: #6098f3;
+	font: 14px/2.8 Georgie, Serif;
+	filter:alpha(opacity=100);
+	-moz-opacity:0.0;
+	opacity:0.8;
+	-khtml-opacity:0.0;
+	border-radius : 10px
+	}
+
+/*--- Path Foto ---*/
+.circel{
+	width: 200px;
+	height: 200px;
+	background: #1e90ff;
+	-webkit-clip-path: circle(50% at 50% 50%);
+	clip-path: circle(50% at 50% 50%);
+}
+.bayang-O{
+width: 200px;
+	height: 200px;
+	border: 5px solid #2196F3;
+	-moz-box-shadow: 0px 6px 5px #ccc;
+	-webkit-box-shadow: 0px 6px 5px #ccc;
+	box-shadow: 0px 0px 0px #ccc;
+	-moz-border-radius:190px;
+	-webkit-border-radius:190px;
+	border-radius:190px;
+	}
+.container{
+	position: absolute;
+	top: 200px;
+	left: 200px;	
+}
+.container1{
+	position: absolute;
+	top: 200px;
+	right: 200px;	
+}
+
+/*----------------------------
+id tombolkalkulator
+-----------------------------*/
+#tombol{
+	padding-top : 10px;
+	padding-bottom:10px;
+	margin-left:0px;
+	
+}
+
+/*--- Background ---*/
+
+.footer{
+width: auto;
+background-color: #00000;
+padding: 10px;
+text-align: center;
+
+}

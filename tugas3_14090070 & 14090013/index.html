@@ -1,0 +1,82 @@
+<html>
+	<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Kalkulator Sederhana</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="kalku">
+<?php
+$bil1 = isset($_POST['bil1']) ? $_POST['bil1'] : NULL;
+$bil2 = isset($_POST['bil2']) ? $_POST['bil2'] : NULL;
+$hasil = isset($hasil) ? $hasil : 0;
+
+if(isset($_POST['tambah'])){
+$hasil = $bil1+$bil2;
+}
+
+if(isset($_POST['kurang'])){
+$hasil = $bil1-$bil2;	
+}
+
+if(isset($_POST['kali'])){
+$hasil = $bil1*$bil2;
+}
+
+if(isset($_POST['bagi'])){
+$hasil = $bil1/$bil2;
+}
+
+if(isset($_POST['clear'])){
+$hasil='';
+$bil1='';
+$bil2='';
+}
+
+if(isset($_POST['sqrt'])){
+$hasil=sqrt($bil1);
+
+}
+
+if(isset($_POST['^2'])){
+$hasil=($bil1*$bil1);
+}
+
+if(isset($_POST['%'])){
+$hasil=($bil1*$bil2)/100;
+}
+
+if(isset($_POST['1/x'])){
+$hasil=(1/$bil1);
+}
+
+echo '<div class="panel">'.
+'<form action="" method="post">'.
+'<div align="center">   KALKULATOR SEDERHANA    </div>'.
+'<div align="center">=============================</div>'.
+
+
+'<b>MASUKAN BILANGAN KE-1:</b><br/>'.
+'<input type="text" name="bil1" value="'.$bil1.'"/><br/>'.
+'<b>MASUKAN BILANGAN KE-2:</b><br/>'.
+'<input type="text" name="bil2" value="'.$bil2.'"/><br/>'.
+'<input class="tombol" type="submit" name="tambah" value="+"/>'.
+'<input class="tombol" type="submit" name="kurang" value="-"/>'.
+'<input class="tombol" type="submit" name="kali" value="X"/>'.
+'<input class="tombol" type="submit" name="bagi" value=":"/>'.
+'<INPUT class="tombol" type="submit" name="clear" value="C"/>'.
+'<input class="tombol" type="submit" name="sqrt" value="sqrt"/>'.
+'<input class="tombol" type="submit" name="^2" value="^2"/>'.
+'<input class="tombol" type="submit" name="%" value="%"/>'.
+'<input class="tombol" type="submit" name="1/x" value="1/X"/><br/>'.
+
+'</form>'.
+'<b>HASIL:</b><br/>'.
+'<input type="text" value="'.$hasil.'" readonly/><br/>'.
+'</div>';
+?>
+</div>
+</body>
+</html>
